@@ -67,8 +67,8 @@ function drawDistricts(map){
 
   var layers = {
     totalIDPs: {
-      name: 'Number of IDPs per 100,000 inhabitants in 2013',
-      threshold: [1, 50, 100, 500],
+      name: 'Number of IDPs as of November 2014',
+      threshold: [1, 500, 2000, 3500],
       values: totalIDPs
     }
     // totalCases: {
@@ -249,11 +249,11 @@ function drawDistricts(map){
   info.update = function (props) {
     this._div.innerHTML = '<h4>' + layers[this._layer]['name'] + '</h4>' +  (props ?
       '<table>' +
-      '<tr><td style="text-align: right;">Country: </td><td>&nbsp;&nbsp; <b>' + props.CERCLE_NAM + '</b><td></tr>' +
+      '<tr><td style="text-align: right;">Region: </td><td>&nbsp;&nbsp; <b>' + props.CERCLE_NAM + '</b><td></tr>' +
       '<tr><td style="text-align: right;">District: </td><td>&nbsp;&nbsp; <b>' + props.REGION__NA + '</b><td></tr>' +
-      '<tr><td style="text-align: right;">Value: </td><td>&nbsp;&nbsp; <b>' + layers[this._layer]['values'][props.Pcode] + '</b><td></tr>' +
+      '<tr><td style="text-align: right;">IDPs: </td><td>&nbsp;&nbsp; <b>' + layers[this._layer]['values'][props.Pcode] + '</b><td></tr>' +
       '</table>'
-      : 'Hover over a country/district');
+      : 'Hover over a district');
   };
   info.showOtherMessage = function (message){
     this._div.innerHTML = message;
@@ -300,7 +300,7 @@ function drawDistricts(map){
   };
   legend.addTo(map);
 
-  L.control.layers(regularLayers).addTo(map);
+  //L.control.layers(regularLayers).addTo(map);
 
 
   map.on('baselayerchange', function (eventLayer) {
