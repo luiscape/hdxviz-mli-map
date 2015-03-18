@@ -63,7 +63,7 @@ $(document).ready(function() {
 // }
 
 function drawDistricts(map){
-  var color = ["#dfdddd","#ffe082", "#ffbd13", "#ff8053", "#ff493d"];
+  var color = ["#eae6e1","#fcdcd2", "#fabdae", "#f48272", "#f1635a"];
 
   var layers = {
     totalIDPs: {
@@ -100,7 +100,7 @@ function drawDistricts(map){
 
   function getStyle(values, threshold){
     function internalGetColor(color, i){
-      return {color: color[i], fillColor: color[i], fillOpacity: 0.6, opacity: 0.7, weight: 2};
+      return {color: color[i], fillColor: color[i], fillOpacity: 0.6, opacity: 0.7, weight: 0.5};
     }
     return function (feature){
       var pcoderef = feature.properties.Pcode;
@@ -207,7 +207,7 @@ function drawDistricts(map){
               var currentStyle = styleFunction({properties: properties});
               currentStyle['fillOpacity'] = 1;
               currentStyle['opacity'] = 1;
-              currentStyle['color'] = '#f7f7f7';
+              currentStyle['color'] = '#e5dfdf';
               // if (!L.Browser.ie && !L.Browser.opera) {
               //   layer.bringToFront();
               //   for (eLayer in extraLayers)
