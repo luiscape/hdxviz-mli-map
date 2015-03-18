@@ -100,7 +100,7 @@ function drawDistricts(map){
 
   function getStyle(values, threshold){
     function internalGetColor(color, i){
-      return {color: color[i], fillColor: color[i], fillOpacity: 0.6, opacity: 0.7, weight: 0.5};
+      return {color: color[i], fillColor: color[i], fillOpacity: 0.75, opacity: 0.7, weight: 0.7};
     }
     return function (feature){
       var pcoderef = feature.properties.Pcode;
