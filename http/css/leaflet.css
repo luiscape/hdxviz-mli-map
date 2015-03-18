@@ -275,7 +275,7 @@
 .leaflet-control-layers {
 	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
 	background: #fff;
-	border-radius: 5px;
+	border-radius: 50px;
 	}
 .leaflet-control-layers-toggle {
 	background-image: url(images/layers.png);
@@ -466,7 +466,7 @@
 .leaflet-oldie .leaflet-control-layers,
 .leaflet-oldie .leaflet-popup-content-wrapper,
 .leaflet-oldie .leaflet-popup-tip {
-	border: 1px solid #999;
+	border: 1px solid #fff;
 	}
 
 
